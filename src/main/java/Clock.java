@@ -16,7 +16,7 @@ public class Clock extends JFrame {
     private final Timer t = new Timer(1000, cl);
     private final JTextField tf = new JTextField(8);
 
-    public Clock() {
+    public Clock(JFrame f) {
         t.setInitialDelay(0);
 
         JPanel panel = new JPanel();
@@ -45,6 +45,8 @@ public class Clock extends JFrame {
         this.pack();
         this.setLocationRelativeTo(null);
         this.setVisible(true);
+
+        f.add(panel);
     }
 
     public void start() {
